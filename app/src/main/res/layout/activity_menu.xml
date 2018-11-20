@@ -27,6 +27,7 @@
                 android:layout_gravity="center">
 
                 <Button
+                    android:id="@+id/mockinterview"
                     android:layout_width="200dp"
                     android:layout_height="185dp"
                     android:layout_marginRight="3dp"
@@ -37,6 +38,7 @@
                     android:textSize="50dp" />
 
                 <Button
+                    android:id="@+id/freeinterview"
                     android:layout_width="200dp"
                     android:layout_height="185dp"
                     android:layout_marginLeft="3dp"

@@ -1,13 +1,11 @@
 package kr.hs.e_mirim.mockinterview;
 
 import android.app.TabActivity;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TabHost;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -40,6 +38,24 @@ public class activity_menu extends TabActivity {
             public void onTabChanged(String arg0) {
 
                 setTabColor(tabHost);
+            }
+        });
+
+        Button mockInterview=findViewById(R.id.mockinterview);
+        mockInterview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), mockActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button freeInterview=findViewById(R.id.freeinterview);
+        freeInterview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(), free.class);
+                startActivity(intent);
             }
         });
 

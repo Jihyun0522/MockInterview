@@ -27,21 +27,22 @@ public class interviewExplan extends AppCompatActivity {
         TextView explan=findViewById(R.id.text_explan);
         Intent intent = getIntent();
         final String name = intent.getStringExtra("name");
+        String exp = "질문이 중복될 수 있습니다.\n제시된 질문을 읽고 카메라를 켜서 영상을 녹화해주세요.\n질문은 5개입니다.";
 
         switch (name){
             case "newStudent":
                 title.setText("신입생 면접");
-                explan.setText("이 면접은 신입생 면접입니다.");
+                explan.setText("이 면접은 신입생 면접입니다.\n" + exp);
                 break;
 
             case "club":
                 title.setText("동아리 면접");
-                explan.setText("이 면접은 동아리 면접입니다.");
+                explan.setText("이 면접은 동아리 면접입니다.\n" + exp);
                 break;
 
             case "company":
                 title.setText("회사 면접");
-                explan.setText("이 면접은 회사 면접입니다.");
+                explan.setText("이 면접은 회사 면접입니다.\n" + exp);
                 break;
         }
 

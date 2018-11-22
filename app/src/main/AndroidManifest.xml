@@ -25,7 +25,11 @@
             android:name=".tip_view"
             android:theme="@style/AppTheme" />
         <activity android:name=".free" />
-        <activity android:name=".newstudent"></activity>
+        <activity android:name=".interviewExplan" />
+        <activity android:name=".mock_q"></activity>
     </application>
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

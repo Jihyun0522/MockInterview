@@ -21,5 +21,38 @@ public class mockActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button newStudent=findViewById(R.id.newStudent);
+        Button club=findViewById(R.id.club);
+        Button company=findViewById(R.id.company);
+
+        newStudent.setOnClickListener(onClickListener);
+        club.setOnClickListener(onClickListener);
+        company.setOnClickListener(onClickListener);
     }
+
+    Button.OnClickListener onClickListener = new Button.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent;
+            switch (view.getId()) {
+                case R.id.newStudent:
+                    intent=new Intent(getApplicationContext(), interviewExplan.class);
+                    intent.putExtra("name", "newStudent");
+                    startActivity(intent);
+                    break ;
+                case R.id.club:
+                    intent=new Intent(getApplicationContext(), interviewExplan.class);
+                    intent.putExtra("name", "club");
+                    startActivity(intent);
+                    break ;
+                case R.id.company:
+                    intent=new Intent(getApplicationContext(), interviewExplan.class);
+                    intent.putExtra("name", "company");
+                    startActivity(intent);
+                    break ;
+            }
+        }
+    } ;
+
 }
